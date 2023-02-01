@@ -52,6 +52,7 @@ export class CartService {
       if(_item.id===item.id){
         if(_item.quantity>1){
           _item.quantity--;
+          this._snackbar.open('1 Item removed from cart', 'Ok', {duration:3000});
         }
         else{
           this.removeFromCart(item);
